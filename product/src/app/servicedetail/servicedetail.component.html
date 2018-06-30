@@ -1,0 +1,20 @@
+<div class="col-sm-6 col-sm-6 col-sm-offset-3">
+    <h3>Project Form</h3>
+   
+    <div class="form-group">
+      <label class="control-label" for="stackproject">Stack Project:</label>
+
+<select [(ngModel)]="selectedstack.id" (change)="onSelect($event.target.value)">
+  <option value="0">--Select--</option>
+  <option *ngFor="let stackproject of stackprojects" value= {{stackproject.id}}>{{stackproject.name}}</option>
+</select>
+</div>
+
+<div class="form-group">
+    <label class="control-label" for="Project">Projects:</label>
+<select>
+  <option *ngIf='selectedstack.id == 0' value="0">--Select--</option>
+  <option *ngFor="let project of projectsdetails " value= {{project.id}}>{{project.name}}</option>
+</select>
+</div>
+</div>

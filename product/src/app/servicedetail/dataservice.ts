@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { stackproject } from './stackproject';
 import { projects } from './projects';
+import {projectdetails} from './projectdetails';
 
 
 @Injectable()
@@ -26,5 +27,19 @@ export class DataService {
      new projects(9, 3, 'MariaDB' ),
      
     ];
+  }
+
+  getProjectDetails()
+  {
+    return [
+      
+      
+      new projectdetails(1, 'Rest Service oath permission',1,'Oath security','10.20.113.19','http:/chalkurl/restservice','http:/uat/restservice','http:/devurl/restservice','http:/siturl/restservice' ),
+      new projectdetails(2, 'Rest Service basic autentication',1,'Basic Autentication in Rest Service','10.20.114.20','http:/chalkurl/restservice/basic','http:/uat/restservice/basic','http:/devurl/restservice/basic','http:/siturl/restservice/basic' ),
+      new projectdetails(3, 'Angular version 1',4,'Angular version 1 Oath security','10.20.115.21','http:/chalkurl/angular1','http:/uat/angular1','http:/devurl/angular1','http:/siturl/angular1' ),
+      new projectdetails(4, 'Angular version 1 security',4,'Basic Autentication in angular 1','10.20.118.24','http:/chalkurl/basic/angular1','http:/uat/basic/angular1','http:/devurl/basic/angular1','http:/siturl/basic/angular1' ),
+      
+      
+     ];
   }
 }

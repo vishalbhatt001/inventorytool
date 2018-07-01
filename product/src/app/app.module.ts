@@ -21,6 +21,7 @@ import {
   MatRadioModule,  
   MatSelectModule,  
   MatOptionModule,  
+  MatTableModule,
   MatSlideToggleModule,ErrorStateMatcher,ShowOnDirtyErrorStateMatcher  
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';    
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     FormsModule,
     Ng2DropdownModule,
     MatButtonModule,  
-    MatMenuModule,  
+    MatMenuModule,
+    MatTableModule,  
     MatToolbarModule,  
     MatIconModule,  
     MatCardModule,  
@@ -76,7 +78,7 @@ const appRoutes: Routes = [
     MatRadioModule,  
     MatSelectModule,  
     MatOptionModule,  
-    MatSlideToggleModule  
+    MatSlideToggleModule,MatTableModule  
   ],  
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}  ],
   bootstrap: [AppComponent]

@@ -24,7 +24,9 @@ import {
   MatTableModule,
   MatSlideToggleModule,ErrorStateMatcher,ShowOnDirtyErrorStateMatcher  
 } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';    
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './dialog/dialog.component';
+import { ProjectViewComponent } from './project-view/project-view.component';    
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'service_detail', component: ServicedetailComponent },
@@ -37,6 +39,8 @@ const appRoutes: Routes = [
     TestComponent,
     LoginComponent,
     ServicedetailComponent,
+    DialogComponent,
+    ProjectViewComponent,
     
   ],
   imports: [

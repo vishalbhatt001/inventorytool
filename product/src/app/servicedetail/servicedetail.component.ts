@@ -18,8 +18,10 @@ export class ServicedetailComponent implements OnInit {
   projectdescriptions:projectdetails[];
   dataSource;
   displayedColumns = [];
-
+  public checkprojectidg ;
+  checkprojectid : number;
   @ViewChild(MatSort) sort: MatSort;
+  parentMessage = "";
 
   /**
    * Pre-defined columns list for user table
@@ -62,6 +64,13 @@ export class ServicedetailComponent implements OnInit {
   }
   ngOnInit() {
    
+  }
+
+  checkprojects(checkprojectid)
+  {
+this.checkprojectid = checkprojectid;
+this.checkprojectidg = this.checkprojectid;
+this.parentMessage = "message from parent";
   }
 
 }

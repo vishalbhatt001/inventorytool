@@ -18,6 +18,13 @@
 </select>
 </div>
 <div class="form-group">
+    
+
+    <app-dialog [(visible)]="showDialog" [childMessage]="parentMessage">
+      
+      <app-project-view [projectidcheck]="checkprojectid"></app-project-view>
+      <button (click)="showDialog = !showDialog" class="btn">Close</button>
+    </app-dialog>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
@@ -32,7 +39,8 @@
         <!-- Name Column -->
         <ng-container matColumnDef="Name">
           <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          <td mat-cell *matCellDef="let element"> <a (click)="showDialog = !showDialog;checkprojects(element.id)" class="btn">{{element.name}}</a>
+             </td>
         </ng-container>
       
         <!-- Weight Column -->
